@@ -4,19 +4,49 @@
   "description": "A CRUD application to manage a list of items.",
   "main": "index.js",
   "scripts": {
-    "watch-server": "nodemon --watch 'src/**/*' -e ts,tsx --exec ts-node ./src/server.ts"
+    "start": "nodemon",
+    "serve": "ts-node src/index.ts",
+    "build": "tsc"
   },
   "author": "cooperate",
   "license": "ISC",
   "dependencies": {
+    "@koa/router": "^9.0.1",
+    "@typegoose/typegoose": "^7.2.0",
+    "apollo-server": "^2.14.5",
+    "apollo-server-koa": "^2.14.5",
+    "graphql": "^15.1.0",
     "koa": "^2.12.1",
-    "koa-router": "^9.0.1"
+    "koa-bodyparser": "^4.3.0",
+    "koa-graphql": "^0.8.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.2.1",
+    "koa-mount": "^4.0.0",
+    "koa-router": "^9.0.1",
+    "mocha": "^8.0.1",
+    "module-alias": "^2.2.2",
+    "mongoose": "^5.9.19",
+    "typeorm": "^0.2.25",
+    "uuid": "^8.1.0"
   },
   "devDependencies": {
+    "@types/chai": "^4.2.11",
     "@types/koa": "^2.11.3",
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/koa-logger": "^3.1.1",
+    "@types/koa-mount": "^4.0.0",
     "@types/koa-router": "^7.4.1",
+    "@types/mocha": "^7.0.2",
+    "@types/mongoose": "^5.7.24",
+    "@types/node": "^14.0.13",
+    "chai": "^4.2.0",
     "nodemon": "^2.0.4",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.5"
+  },
+  "_moduleAliases": {
+    "@models/*": [ "src/model/*" ],
+    "@controller/*": [ "src/controller/*" ],
+    "@mongoose/*": ["src/mongoose/*"]
   }
 }
