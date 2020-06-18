@@ -1,20 +1,20 @@
-import { v4 as uuidv4 } from 'uuid';
+import { prop } from "@typegoose/typegoose";
 
 interface IItem {
-    id: string;
     title: string;
     message: string;
     column: number;
 } 
 
 export class Item implements IItem {
-   id: string;
+   @prop()
    title: string;
+   @prop()
    message: string;
+   @prop()
    column: number;
 
    constructor(title: string, message: string, column: number) {
-       this.id = uuidv4(); 
        this.title = title;
        this.message = message;
        this.column = column;
