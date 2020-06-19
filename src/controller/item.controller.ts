@@ -18,7 +18,7 @@ export default class ItemController {
   }
 
   public static async createItem(ctx: Context): Promise<void> {
-    ItemController.ItemModel.create({ title: ctx.body.title, message: ctx.body.message, column: ctx.body.column } as Item);
+    ctx.body = await ItemController.ItemModel.create({ title: ctx.body.title, message: ctx.body.message, column: ctx.body.column } as Item);
     ctx.status = 200;
   }
 
@@ -28,7 +28,7 @@ export default class ItemController {
   }
 
   public static async deleteItem(ctx: Context): Promise<void> {
-    ItemController.ItemModel.deleteOne({_id: ctx.body.id}).exec();
+    ItemController.ItemModel.deleteOne({_id: ctx.body._id}).exec();
     ctx.status = 200;
   }
 }

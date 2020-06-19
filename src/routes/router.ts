@@ -12,14 +12,9 @@ routes
     ctx.body = 'get single item';
     await next();
   })
-  .put('/item/:id', (ctx, next) => {
-    // ...
+  .del('/item', async(ctx, next) => {
+    await ItemController.deleteItem(ctx);
+    next();
   })
-  .del('/item/:id', (ctx, next) => {
-    // ...
-  })
-  .all('/item/:id', (ctx, next) => {
-    // ...
-  });
 
 export default routes;

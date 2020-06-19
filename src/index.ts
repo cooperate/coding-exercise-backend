@@ -3,12 +3,13 @@ import Koa, {Context} from "koa";
 import koaBody from 'koa-bodyparser';
 import mongooseConnect from '@mongoose/mongoose';
 import router from '@routes/router';
-
+import cors from '@koa/cors';
 const app = new Koa();
-const port = 3000;
+const port = 3001;
 
 // Middlewares
 const mongooseConnection = mongooseConnect();
+app.use(cors());
 app.use(koaBody());
 app.use(async (ctx: Context, next) => {
     // the parsed body will store in ctx.request.body
