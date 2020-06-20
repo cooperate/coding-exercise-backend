@@ -13,7 +13,10 @@ In the project directory, you can run:
 This will launch the application in development mode.  Changes will be hot-reloaded through
 the use of nodemon. 
 
-### `npm build`
+### `npm run build`
 
 Builds the application into dist.  Run with node [project root]/index.js.
 
+### `npm run test`
+
+Runs tests using mocha and chai.
