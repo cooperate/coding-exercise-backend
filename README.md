@@ -2,6 +2,7 @@
 
 This application presents two lists with persistent state.  Utilises Koa, Mongoose and Typegoose to create an api service with a persistent state.  Built in typescript.
 
+The backend service runs on port 3001.
 
 ## Build the application
 
@@ -14,4 +15,5 @@ the use of nodemon.
 
 ### `npm build`
 
-Builds the application into dist.
+Builds the application into dist.  Run with node [project root]/index.js.
+
