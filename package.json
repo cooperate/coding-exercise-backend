@@ -17,6 +17,7 @@
     "apollo-server": "^2.14.5",
     "apollo-server-koa": "^2.14.5",
     "chai-http": "^4.3.0",
+    "dotenv": "^8.2.0",
     "graphql": "^15.1.0",
     "koa": "^2.12.1",
     "koa-bodyparser": "^4.3.0",

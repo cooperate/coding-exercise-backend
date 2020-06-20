@@ -1,4 +1,7 @@
 import mongoose from "mongoose";
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 const uri =
   "mongodb+srv://dbUser:GyAHUPbEGQt@!s6@cluster0-bciwc.mongodb.net/coding-exercise-db?retryWrites=true&w=majority";
