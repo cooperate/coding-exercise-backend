@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist",
-    "lib": ["es5", "es6"],
+    "lib": ["es5", "es6", "dom"],
     "target": "es6",
     "module": "commonjs",
     "moduleResolution": "node",
@@ -12,7 +12,7 @@
     "paths": {
         "@model/*": [ "src/model/*" ],
         "@controller/*": [ "src/controller/*" ],
-        "@mongoose/*": ["src/mongoose/*"],
+        "@mongoose-db/*": ["src/mongoose-db/*"],
         "@routes/*": ["src/routes/*"],
         "~/*": ["src/*"]
     }

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "nodemon",
     "serve": "ts-node src/index.ts",
-    "build": "tsc tspath"
+    "build": "rm -rf dist && tsc -p tsconfig.json"
   },
   "author": "cooperate",
   "license": "ISC",
@@ -50,10 +50,10 @@
     "typescript": "^3.9.5"
   },
   "_moduleAliases": {
-    "@model": "src/model",
-    "@controller": "src/controller",
-    "@mongoose": "src/mongoose",
-    "@routes": "src/routes",
-    "~": "src"
+    "@model": "dist/model",
+    "@controller": "dist/controller",
+    "@mongoose-db": "dist/mongoose-db",
+    "@routes": "dist/routes",
+    "~": "dist"
   }
 }

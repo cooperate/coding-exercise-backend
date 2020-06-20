@@ -1,8 +1,8 @@
 import 'module-alias/register';
 import Koa, {Context} from "koa";
 import koaBody from 'koa-bodyparser';
-import mongooseConnect from '@mongoose/mongoose';
 import router from '@routes/router';
+import mongooseConnect from '@mongoose-db/mongoose';
 import cors from '@koa/cors';
 const app = new Koa();
 const port = 3001;
