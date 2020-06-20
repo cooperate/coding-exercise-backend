@@ -14,7 +14,6 @@ app.use(koaBody());
 app.use(async (ctx: Context, next) => {
     // the parsed body will store in ctx.request.body
     // if nothing was parsed, body will be an empty object {}
-    console.log('request', ctx.request.body);
     ctx.body = ctx.request.body;
     await next();
 });

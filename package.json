@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon",
     "serve": "ts-node src/index.ts",
-    "build": "rm -rf dist && tsc -p tsconfig.json"
+    "build": "rm -rf dist && tsc -p tsconfig.json",
+    "test": "mocha -r ts-node/register src/**/*.spec.ts"
   },
   "author": "cooperate",
   "license": "ISC",
@@ -18,7 +19,6 @@
     "apollo-server-koa": "^2.14.5",
     "chai-http": "^4.3.0",
     "dotenv": "^8.2.0",
-    "graphql": "^15.1.0",
     "koa": "^2.12.1",
     "koa-bodyparser": "^4.3.0",
     "koa-graphql": "^0.8.0",

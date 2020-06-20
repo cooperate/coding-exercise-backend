@@ -19,7 +19,6 @@ export default class ItemController {
 
   public static async createItem(ctx: Context): Promise<void> {
     const itemCount: Item[] = await ItemController.ItemModel.find({}).exec();
-    console.log(itemCount.length);
     if( itemCount.length < 20){
       ctx.body = await ItemController.ItemModel.create({ title: ctx.body.title, message: ctx.body.message, column: ctx.body.column } as Item);
       ctx.status = 200;
