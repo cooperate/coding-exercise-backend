@@ -2,7 +2,7 @@
 
 Important!
 
-This section of the package.json must use src for development and prod for production builds in pathnames until I find the appropriate course for module alias resolution.
+This section of the package.json must use src for development and dist for production builds in pathnames until I find the appropriate course for module alias resolution.
 
 ```
   "_moduleAliases": {
