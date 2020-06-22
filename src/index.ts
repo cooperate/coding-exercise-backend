@@ -21,7 +21,7 @@ app
   .use(router.routes())
   .use(router.allowedMethods());
 // The `listen` method launches a web server.
-const server = app.listen({ port }, () => 
+const server = app.listen(port, () => 
     console.log(`🚀 Server ready at http://localhost:${port}`),
 );
 
