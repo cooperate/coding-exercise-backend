@@ -1,22 +1,12 @@
 # Lists Application Backend
 
-Important!
-
-This section of the package.json must use src for development and dist for production builds in pathnames until I find the appropriate course for module alias resolution.
-
-```
-  "_moduleAliases": {
-    "@model": "src/model",
-    "@controller": "src/controller",
-    "@mongoose-db": "src/mongoose-db",
-    "@routes": "src/routes",
-    "~": "src"
-  }
-```
-
 This application presents two lists with persistent state.  Utilises Koa, Mongoose and Typegoose to create an api service with a persistent state.  Built in typescript.
 
 The backend service runs on port 3001.
+
+Important!
+
+In order for development mode to run correctly, you must run `npm run build` first to compile the app to bypass module-alias path errors.
 
 ## Build the application
 
